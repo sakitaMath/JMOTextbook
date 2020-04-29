@@ -1,0 +1,72 @@
+\documentclass[dvipdfmx]{jsbook}
+
+\begin{document}
+
+\title{数オリテキスト(仮)}
+\author{佐世保北高校数学オリンピック勉強会}
+\date{令和2年度}
+\maketitle
+
+\part{はじめに}
+
+\part{代数}
+\chapter{方程式}
+\section{同じ部分をまとめる}
+同じ部分はいったんまとめる事で、式がすっきりして解きやすくなることがあります。
+同じ部分を見つけたら、文字で置くなどしてまとめましょう。
+また、文字で置いた場合は値の範囲も確認して、ありえない値を書かないようにしょう。
+
+\vspace{15pt} {\large \textbf{例}}
+
+\begin{quote}
+    $(x^2+2x)^2+3(x^2+2x)+2=0$
+
+    $X=x^2+2x$
+    とすると
+    $(X\geq-1$ –– $ \textcircled{\scriptsize1})$
+    
+    $(X+1)(X+2)=0$
+    
+    $ \textcircled{\scriptsize1} $より
+    
+    $X=-1$
+    
+    $x^2+2x=-1$
+    
+    $x^2+2x+1=0$
+    
+    $(x+1)^2=0$
+    
+    $x=-1$
+\end{quote}
+
+練習問題
+
+$\frac{1}{x^2+-10x-29}+\frac{1}{x^2+-10x-45}-\frac{1}{x^2+-10x-69}=0$
+
+\fbox{ポイント}
+
+$x^2-10x$に着目し、まとめる
+
+\paragraph{}解答
+
+$X=x^2-10x-45$とおくと($X\geq-70$ー $\textcircled{\scriptsize1}$)
+
+$\frac{1}{X+16}+\frac{1}{X}-\frac{1}{X-24}=0$
+
+$X(X-24)+(X+16)(X-24)-(X+16)X=0$
+
+$X^2-48X-384$
+
+\section{解と係数の関係}
+
+$ax^2+bx+c=0$
+の解を
+$x=\alpha,\beta$
+とすると
+$(a\neq0)$
+
+$\alpha+\beta=-\frac{b}{a}$
+
+$\alpha\beta=\frac{c}{a}$
+\end{document}
