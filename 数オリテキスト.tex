@@ -289,6 +289,30 @@ $\left(a^2_1,a^2_2,a^2_3\dots,a^2_n\right)\left(b^2_1,b^2_2,b^2_3\dots,b^2_n\rig
 が成り立つ。
 \begin{quote}
     \begin{proof}
+        感動的な証明
+
+        $x$の2次関数$\displaystyle \sum_{i=0}^{n}(a_ix-b_i)$は常に非負であるから、
+
+        $\displaystyle \sum_{i=0}^{n}(a_ix-b_i)=0$の判別式を$D$とすると、
+
+        $\displaystyle\frac{D}{4}\leqq 0$
+
+        $\displaystyle \left(\sum_{i=0}^{n}a_ib_i\right)^2-\left(\sum_{i=0}^{n}a_i^2\right)\left(\sum_{i=0}^{n}b_i^2\right)\leqq 0$
+
+        $\displaystyle \left(\sum_{i=1}^n a^2_i\right)\left(\sum_{i=1}^n b^2_i\right)\geqq\left(\sum_{i=1}^n a_ib_i\right)^2$
+
+        等号成立は$D=0$つまり$\displaystyle \sum_{i=0}^{n}(a_ix-b_i)=0$が解を持つときであり、
+
+        これは$a_ix-b_i=0 \left(i = 1,2,3,\dots ,n\right)$と同値である。
+
+        さらにこれは$a_1:a_2:a_3:\dots:a_n=b_1:b_2:b_3:\dots:b_n$と同値である。
+    \end{proof}
+\end{quote}
+
+\begin{quote}
+    \begin{proof}
+        幾何的な証明
+
         $n$次元のベクトルの内積について考える
 
         $\vec{a}=\left(a_1,a_2,a_3,\dots,a_n\right)$
@@ -307,7 +331,7 @@ $\left(a^2_1,a^2_2,a^2_3\dots,a^2_n\right)\left(b^2_1,b^2_2,b^2_3\dots,b^2_n\rig
 
         $\left(a^2_1,a^2_2,a^2_3\dots,a^2_n\right)\left(b^2_1,b^2_2,b^2_3\dots,b^2_n\right)\geqq\left(a_1b_1,a_2b_2,a_3b_3,\dots,a_nb_n\right)^2$
 
-        等号成立条件は、$\cos^2\theta=1$すなわち2つのベクトルが並行なときであり、
+        等号成立条件は、$\cos^2\theta=1$すなわち2つのベクトルが平行なときであり、
 
         $a_1:a_2:a_3:\dots:a_n=b_1:b_2:b_3:\dots:b_n$と同値である。
     \end{proof}
@@ -472,4 +496,6 @@ $f\left(x+1\right)=f\left(x\right)+1$的なやつ。
 \end{quote}
 \paragraph{豆知識}$\displaystyle \left[\frac{n}{a^k}\right]$は、$n$を$a$進数表記し、下$k$桁を切り落としたものになる。
 $\displaystyle n-\left[\frac{n}{a^k}\right]$は、$n$を$a$進数表記したときの下$k$桁を表す。
+
+\chapter{幾何}
 \end{document}
