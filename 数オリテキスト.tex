@@ -1,7 +1,7 @@
 \documentclass[uplatex,fleqn]{jsbook}
-\usepackage{amsmath,amssymb,amsthm}
+\usepackage{amsmath,amssymb,amsthm,sakitaMath}
 \usepackage[dvipdfmx,final]{graphicx}
-\graphicspath{figures/}
+
 \begin{document}
 
 \title{\HUGE 「(タイトルは思いついたら差し替えてください)」}
@@ -39,7 +39,6 @@
 このテキストは、数式をみやすく、美しく表現するために、wordなどではなく、\LaTeX というプログラミング言語で書かれています。そのソースコードと、PDFファイルを
 github(https://github.com/sakitaMath/JMOTextbook)にアップロードしています。修正を行う場合は、githubにアップロードしているREADME.mdを読んでください。
 
-\section{必要な知識}
 \section{記号・用語についての説明}
 \subsection{集合の記号}
 \begin{table}[h]
@@ -52,7 +51,6 @@ github(https://github.com/sakitaMath/JMOTextbook)にアップロードしてい�
         $\mathbb{C}$ & 複素数\\\hline
     \end{tabular}
 \end{table}
-\subsection{}
 
 \chapter{代数}
 \section{方程式}
@@ -61,8 +59,7 @@ github(https://github.com/sakitaMath/JMOTextbook)にアップロードしてい�
 同じ部分を見つけたら、文字で置くなどしてまとめる。
 また、文字で置いた場合は値の範囲も確認して、ありえない値を書かないようにすること。
 
-\vspace{15pt} {\large \textbf{例題}}
-\begin{quote}
+\begin{problem}{例題}
     $\left(x^2+2x\right)^2+3\left(x^2+2x\right)+2=0$
 
     $X=x^2+2x$とすると($X\geqq-1$ --- ①)
@@ -80,18 +77,17 @@ github(https://github.com/sakitaMath/JMOTextbook)にアップロードしてい�
     $\left(x+1\right)^2=0$
 
     $x=-1$
-\end{quote}
+\end{problem}
 
-\vspace{15pt}{\large \textbf{練習問題}}
-\begin{quote}
+\begin{problem}{練習問題}
     次の方程式を解け。
     $\displaystyle \frac{1}{x^2-10x-29}+\frac{1}{x^2-10x-45}-\frac{2}{x^2-10x-69}=0$
-\end{quote}
+\end{problem}
 
 \paragraph{ポイント}$x^2-10x$に着目し、まとめる。
 
-\vspace{15pt} {\large \textbf{解答}}
-\begin{quote}
+
+\begin{answer}
     $X=x^2-10x-49$とおくと($X\geqq-74$ --- ①)
 
     $\displaystyle \frac{1}{X+20}+\frac{1}{X+4}-\frac{2}{X-20}=0$
@@ -111,7 +107,7 @@ github(https://github.com/sakitaMath/JMOTextbook)にアップロードしてい�
     $\left(x-13\right)\left(x+3\right)=0$
 
     $x=-3,13$
-\end{quote}
+\end{answer}
 
 \subsection{解と係数の関係}
 
@@ -133,15 +129,13 @@ $\left(a\neq0\right)$
 
 2次方程式だけでなく、3次以上の場合でも、上と同じように考えることができる。
 
-\vspace{15pt}{\large \textbf{練習問題1}}
-\begin{quote}
+\begin{problem}{練習問題1}
     $x^{1995}-x+5=0$
 
     の全ての解の1995乗の和を求めよ。
-\end{quote}
+\end{problem}
 
-\vspace{15pt} {\large \textbf{解答}}
-\begin{quote}
+\begin{answer}
     解を$x_1,x_2,x_3,\dots,x_{1995}$とすると、
 
     $x^{1995}-x+5=\left(x-x_1\right)\left(x-x_2\right)\left(x-x_3\right)\dots \left(x-x_{1995}\right)$
@@ -169,11 +163,10 @@ $\left(a\neq0\right)$
     $=-5\times 1995$
 
     $=-9975$
-\end{quote}
+\end{answer}
 $n$次方程式の$x^{n-1}$の係数が、解の総和に$-1$をかけたものに等しいことは、覚えておいても良い。
 
-\vspace{15pt}{\large \textbf{練習問題2}}
-\begin{quote}
+\begin{problem}{練習問題2}
     次の方程式を解け。
 
     \begin{math}
@@ -183,10 +176,9 @@ $n$次方程式の$x^{n-1}$の係数が、解の総和に$-1$をかけたもの�
         \end{cases}
         \left(x,y\in\mathbb{N}\right)
     \end{math}
-\end{quote}
+\end{problem}
 
-\vspace{15pt}{\large \textbf{解答}}
-\begin{quote}
+\begin{answer}
     x,yは整数なので因数分解をすることで解くこともできるが、解と係数の関係を使うと、約数を全通り試す必要なく解くことができる。
 
     \begin{math}
@@ -230,7 +222,7 @@ $n$次方程式の$x^{n-1}$の係数が、解の総和に$-1$をかけたもの�
     \end{quote}
 
     $\therefore \left(x,y\right)=\left(5,11\right),\left(11,5\right)$
-\end{quote}
+\end{answer}
 
 \section{不等式}
 \subsection{2乗をつくる}
@@ -243,13 +235,11 @@ $B^2\geqq 0$
 
 $A^2+B^2\geqq 0$
 
-\vspace{15pt}{\large \textbf{練習問題}}
-\begin{quote}
+\begin{problem}{練習問題}
     $a^2+b^2+c^2\geqq ab+bc+ca$を示せ。
-\end{quote}
+\end{problem}
 
-\vspace{15pt}{\large \textbf{解答}}
-\begin{quote}
+\begin{answer}
     方針として、$\left(a- b\right)^2=a^2-2ab+b^2$を使うために、$2ab$をつくる。
 
     $\left(\text{左辺}\right)-\left(\text{右辺}\right)$
@@ -263,7 +253,7 @@ $A^2+B^2\geqq 0$
     $\displaystyle =\frac{1}{2}\{\left(a-b\right)^2+\left(b-c\right)^2+\left(c-a\right)^2\}\geqq 0$
 
     \qed
-\end{quote}
+\end{answer}
 
 \subsection{相加相乗平均}
 $\displaystyle \frac{a+b}{2}$を相加平均といい、$\sqrt{ab}$を相乗平均という。
@@ -293,24 +283,29 @@ n変数の場合$\displaystyle \sum_{i=1}^n a_i\geqq n\sqrt[n]{\prod_{i=1}^n a_i
 
 等号成立は、$a=b$のときである。
 
-\vspace{15pt}{\large \textbf{練習問題}}
-\begin{quote}
+\begin{problem}{練習問題}
     $x,y,z>0$とする
 
     $\displaystyle \frac{x^3y^2z}{x^6+y^6+z^6}$の最大値を求めよ。
-\end{quote}
+\end{problem}
 
-\vspace{15pt}{\large \textbf{解答}}
-\begin{align*}
-    &\text{分母が最小になるときに最大になる}\\
-    &x^6+y^6+z^6\\
-    &=\frac{1}{3}x^6+\frac{1}{3}x^6+\frac{1}{3}x^6+\frac{1}{2}y^6+\frac{1}{2}y^6+z^6\text{ ---①}\\
-    \text{①}&\geqq6\sqrt[6]{\frac{1}{3}x^6\times\frac{1}{3}x^6\times\frac{1}{3}x^6\times\frac{1}{2}y^6\times\frac{1}{2}y^6\times z^6}\\
-    &=6\sqrt[6]{\frac{1}{108}}\ x^3y^2z\\
-    &=\sqrt[3]{4}\times\sqrt[2]{3}x^3y^2z\\
-    &\therefore \frac{1}{\sqrt[3]{4}\times\sqrt[2]{3}}\\
-    &\text{①のような変形をすることで無理矢理}x^3y^2z\times{をつくって消すことができた。}
-\end{align*}
+\begin{answer}
+        分母が最小になるときに最大になる
+
+        $x^6+y^6+z^6$
+
+        $\displaystyle=\frac{1}{3}x^6+\frac{1}{3}x^6+\frac{1}{3}x^6+\frac{1}{2}y^6+\frac{1}{2}y^6+z^6\text{ ---①}$
+
+        \text{①}$\displaystyle\geqq6\sqrt[6]{\frac{1}{3}x^6\times\frac{1}{3}x^6\times\frac{1}{3}x^6\times\frac{1}{2}y^6\times\frac{1}{2}y^6\times z^6}$
+
+        $\displaystyle=6\sqrt[6]{\frac{1}{108}}\ x^3y^2z$
+
+        $\displaystyle=\sqrt[3]{4}\times\sqrt[2]{3}x^3y^2z$
+
+        $\displaystyle\therefore \frac{1}{\sqrt[3]{4}\times\sqrt[2]{3}}$
+
+        ①のような変形をすることで無理矢理$x^3y^2z$をつくって消すことができた。
+\end{answer}
 
 \subsection{コーシーシュワルツ不等式}
 $\displaystyle \left(\sum_{i=1}^n a^2_i\right)\left(\sum_{i=1}^n b^2_i\right)\geqq\left(\sum_{i=1}^n a_ib_i\right)^2$つまり
@@ -368,8 +363,7 @@ $\left(a^2_1,a^2_2,a^2_3\dots,a^2_n\right)\left(b^2_1,b^2_2,b^2_3\dots,b^2_n\rig
     \end{proof}
 \end{quote}
 
-\vspace{15pt}{\large \textbf{例題}}
-\begin{quote}
+\begin{problem}{例題}
     $4\left(w^2+x^2+y^2+z^2\right)\geqq \left(w+x+y+z\right)^2$を示す。
 
     $\left(\text{左辺}\right)=\left(1+1+1+1\right)\left(w^2+x^2+y^2+z^2\right)$
@@ -383,19 +377,17 @@ $\left(a^2_1,a^2_2,a^2_3\dots,a^2_n\right)\left(b^2_1,b^2_2,b^2_3\dots,b^2_n\rig
     等号成立は$w:x:y:z=1:1:1:1$
 
     つまり$w=x=y=z$のとき。
-\end{quote}
+\end{problem}
 
 \paragraph{注}有名不等式を使うときは、名前を書くこと。
 
-\vspace{15pt}{\large \textbf{練習問題}}
-\begin{quote}
+\begin{problem}{練習問題}
     $x+y+z=1$、$x,y,z>0$のとき
 
     $\displaystyle \frac{1}{x}+\frac{4}{y}+\frac{9}{z}$の最小値を求めよ。
-\end{quote}
+\end{problem}
 
-\vspace{15pt}{\large \textbf{解答}}
-\begin{quote}
+\begin{answer}
     コーシーシュワルツ不等式より、
 
     $\displaystyle \left(x+y+z\right)\left(\frac{1}{x}+\frac{4}{y}+\frac{9}{z}\right)\geqq \left(1+2+3\right)^2$
@@ -411,7 +403,7 @@ $\left(a^2_1,a^2_2,a^2_3\dots,a^2_n\right)\left(b^2_1,b^2_2,b^2_3\dots,b^2_n\rig
     $x=\frac{y}{2}=\frac{z}{3}$
 
     $\therefore 36$
-\end{quote}
+\end{answer}
 
 \section{多項式}
 割り算頑張る。
@@ -423,8 +415,7 @@ $f\left(x+1\right)=f\left(x\right)+1$的なやつ。
 一般項を求める問題などが出題される。
 実験$\rightarrow$予想$\rightarrow$の順で解いていく。手を動かして頑張ろう。
 
-\vspace{15pt}{\large \textbf{練習問題1}}
-\begin{quote}
+\begin{problem}{練習問題1}
     $n\in \mathbb{N}$
 
     $a_n:\sqrt{n}$に最も近い自然数
@@ -432,37 +423,10 @@ $f\left(x+1\right)=f\left(x\right)+1$的なやつ。
     $b_n=a_n+n$
 
     $b_n$の規則性を予想せよ。
-\end{quote}
+\end{problem}
 
-\vspace{15pt}{\large \textbf{解答}}
-\begin{quote}
+\begin{answer}
     とりあえず実験をしてみる。$n\leqq 20$で試してみると、以下の表のようになる。
-    % \begin{table}[h]
-    %     \begin{tabular}{rrr}
-    %         \hline
-    %         $n$ & $a_n$ & $b_n$ \\ \hline \hline
-    %         $1$ & $1$ & $2$ \\
-    %         $2$ & $1$ & $3$ \\
-    %         $3$ & $2$ & $5$ \\
-    %         $4$ & $2$ & $6$ \\
-    %         $5$ & $2$ & $7$ \\
-    %         $6$ & $2$ & $8$ \\
-    %         $7$ & $3$ & $10$ \\
-    %         $8$ & $3$ & $11$ \\
-    %         $9$ & $3$ & $12$ \\
-    %         $10$ & $3$ & $13$ \\
-    %         $11$ & $3$ & $14$ \\
-    %         $12$ & $3$ & $15$ \\
-    %         $13$ & $4$ & $17$ \\
-    %         $14$ & $4$ & $18$ \\
-    %         $15$ & $4$ & $19$ \\
-    %         $16$ & $4$ & $20$ \\
-    %         $17$ & $4$ & $21$ \\
-    %         $18$ & $4$ & $22$ \\
-    %         $19$ & $4$ & $23$ \\
-    %         $20$ & $4$ & $24$ \\\hline
-    %     \end{tabular}
-    % \end{table}
 
     \begin{table}[h]
         \begin{center}
@@ -496,10 +460,9 @@ $f\left(x+1\right)=f\left(x\right)+1$的なやつ。
 
     \end{proof}
 
-\end{quote}
+\end{answer}
 
-\vspace{15pt}{\large \textbf{練習問題2}}
-\begin{quote}
+\begin{problem}{練習問題2}
     \begin{math}
         \begin{cases}
             f\left(0\right)=0\\
@@ -509,10 +472,9 @@ $f\left(x+1\right)=f\left(x\right)+1$的なやつ。
     \end{math}
 
     $f\left(n\right)$の規則性を予想せよ。
-\end{quote}
+\end{problem}
 
-\vspace{15pt}{\large \textbf{解答}}
-\begin{quote}
+\begin{answer}
     $n\leqq 16$で試してみると、以下の表のようになる。
 
     \begin{table}[h]
@@ -526,7 +488,7 @@ $f\left(x+1\right)=f\left(x\right)+1$的なやつ。
     $f\left(n\right)$は$n$を2進数で表したときの1の数である。
 
     $\displaystyle f\left(\left[\frac{n}{2}\right]\right)$は1の位以外の部分での1の数、$\displaystyle n-2\left[\frac{n}{2}\right]$は1の位の数を表している。
-\end{quote}
+\end{answer}
 \paragraph{豆知識}$\displaystyle \left[\frac{n}{a^k}\right]$は、$n$を$a$進数表記し、下$k$桁を切り落としたものになる。
 $\displaystyle n-\left[\frac{n}{a^k}\right]$は、$n$を$a$進数表記したときの下$k$桁を表す。
 
@@ -554,15 +516,13 @@ $\displaystyle n-\left[\frac{n}{a^k}\right]$は、$n$を$a$進数表記したと
 
 下に行くほど難しく思えるかもしれないが、下の方が計算力でなんとかなり、上の方が思いつかないと解けないことが多く、難しい。
 
-ここでは初等幾何に触れる。なお、複素座標については、別冊にまとめた。
+ここでは主に初等幾何に触れる。なお、複素座標については、別冊にまとめた。
 \section{初等幾何}
 
 \subsection{相似・合同}
-\begin{itemize}
-    \item 条件は最低限覚えておく(学校で習うので割愛)
-    \item 等しい角や長さを見つけることができる
-    \item いつも相似な図形がないか探しておくと良いかもしれない
-\end{itemize}
+条件は最低限覚えておく(学校で習うので割愛)。
+等しい角や長さを見つけることができる。
+いつも相似な図形がないか探しておくと良いかもしれない。
 
 \subsection{円周角の定理}
 
@@ -572,20 +532,181 @@ $\displaystyle n-\left[\frac{n}{a^k}\right]$は、$n$を$a$進数表記したと
     \item 内接四角形の対角の和$=180^{\circ}$
 \end{itemize}
 
-逆も成り立つ$\rightarrow$円に内接する4点を探せる
+逆も成り立つ$\rightarrow$円に内接する4点を探せる。
 
 \includegraphics[clip,width=5cm]{figures/inscribed-angle.pdf}
 
 \subsection{接弦定理}
-\begin{itemize}
-    \item 図の角が等しい
-    \item 比較的頻出
-\end{itemize}
+図の角が等しい。
+比較的頻出。
 
 \includegraphics[clip,width=5cm]{figures/setsugen.pdf}
 
 \subsection{方べきの定理}
+よく出てくる。
 \begin{itemize}
-    \item よく出てくる
+    \item $AE\times ED=BE\times EC$
+    \item $AB^2=AC\times AD = AE \times AF$
 \end{itemize}
+
+\includegraphics[clip,height=5cm]{figures/houbeki.pdf}
+
+\subsection{共円な4点}
+同一円周上にある4点のこと。
+\begin{itemize}
+    \item 相似
+    \item 円周角の逆
+    \item 方べきの逆
+\end{itemize}
+逆等を使って見つける。
+見つけたら、その円を描いてみることで発見できることもあったりなかったりする。
+
+\subsection{チェバの定理・メネラウスの定理}
+使いどころが多いが、運用が難しい。
+\begin{itemize}
+    \item $\displaystyle \frac{AD}{DB} \times \frac{BE}{EC} \times \frac{CF}{FA} = 1$
+    \item $\displaystyle \frac{GJ}{JH} \times \frac{HK}{KI} \times \frac{IL}{LG} = 1$
+\end{itemize}
+
+\includegraphics[clip,height=5cm]{figures/Ceva_Menelaus.pdf}
+
+\subsection{Angle-chase}
+\begin{itemize}
+    \item 相似
+    \item 円周角の定理
+    \item 同位角・錯覚
+\end{itemize}
+
+等を使って同じ角度を追いかけていく。
+
+$\rightarrow$新たな相似、合同、共円な4点が見つかるかもしれない。
+
+\subsection{角の二等分線}
+\begin{itemize}
+    \item $AB:BC=BD:DC=BE:EC$
+\end{itemize}
+
+\includegraphics[clip,width=6cm]{figures/nitobun.pdf}
+
+\subsection{中線定理}
+\begin{itemize}
+    \item $AB^2+AC^2=2\left(AM^2+BM^2\right)$
+\end{itemize}
+
+\includegraphics[clip,height=5cm]{figures/chusen.pdf}
+
+\subsection{補助線}
+\begin{itemize}
+    \item 基本事項が使えるように引く
+    \item 二等辺三角形をいっぱい作る
+\end{itemize}
+等、やみくもに引かず、
+うまくいくようにやるのが大事
+
+\subsection{三角形の五心}
+
+これらの点が問題に出ていなくても、これらを考えることで問題が解きやすくなることがある。
+例えば、直線上に垂心があることを示すことで、二直線が直交することを示すことができる。
+
+\begin{itemize}
+    \item 内心$I$
+    \begin{itemize}
+        \item $A$から接点までの距離は$\displaystyle \frac{AB+CA-BC}{2}$
+    \end{itemize}
+    \includegraphics[clip,height=5cm]{figures/Naishin.pdf}
+
+    \item 傍心$I_A$
+    \begin{itemize}
+        \item $A$から接点までの距離は$\displaystyle \frac{AB+BC+CA}{2}$
+    \end{itemize}
+    \includegraphics[clip,height=5cm]{figures/Boushin.pdf}
+
+    \item 重心$G$
+
+    \includegraphics[clip,height=5cm]{figures/Jushin.pdf}
+
+    \item 垂心$H$
+
+    \includegraphics[clip,height=5cm]{figures/Suishin.pdf}
+
+    \item 外心$O$
+
+    \includegraphics[clip,height=5cm]{figures/Gaishin.pdf}
+\end{itemize}
+
+\subsection{垂心について}
+垂心は頂点から辺に引いた垂線の交点あるから、以下のような円がかける。
+また、円周角の定理より、図に示した角が等しい。
+このような性質から、垂心周りの角度を簡単に表すことができる。
+
+\includegraphics[clip,height=5cm]{figures/Suishin1.pdf}
+\includegraphics[clip,height=5cm]{figures/Suishin2.pdf}
+
+\subsection{オイラー線}
+三角形の垂心、重心、外心は同一直線状に存在し、この直線をオイラー線という。
+
+\includegraphics[clip,height=5cm]{figures/Euler.pdf}
+
+\subsection{九点円}
+三角形において、各辺の中点と垂線の足、垂心と各頂点の中点は同一円周上にあり、その円を九点円という。
+
+\includegraphics[clip,height=5cm]{figures/Euler_circle.pdf}
+
+\subsection{反転}
+\includegraphics[clip,height=4cm]{figures/Hanten.pdf}
+
+反転とは、円を用いて点の変換を行うものである。中心$O$、半径$r$の円で点$A$を反転するとき、
+点$A$を反転した点$A'$は半直線$OA$上の点であり、$\displaystyle OA'=\frac{r^2}{OA}$を満たす。
+$O$と一致する点は反転すると無限遠点という仮想の点になると考える。逆に、無限遠点は反転すると、$O$に戻る。
+反転を行うと、直線や円は以下のように変換される。
+\begin{quote}
+    $O$を通らない円$\leftrightarrow$$O$を通らない円
+
+    $O$を通る円$\leftrightarrow$$O$を通らない直線
+
+    $O$を通らない直線$\leftrightarrow$$O$を通る円
+
+    $O$を通る直線$\leftrightarrow$$O$を通る直線（自分自身）
+\end{quote}
+これらは、直線は無限遠点を含むと考えると、簡単に導出することができる。
+
+反転をしても、図形どうしの交点の数はだいたい変わらず、
+図形が接している、接していないという状況は変わらない。
+1点を通る円が多いとき、その点を中心とする円で反転すると直線が多くなって図が簡単になる。
+
+\section{三角法}
+ここではあまり三角法については触れない。正弦定理、余弦定理が使えれば問題ない。
+
+\section{問題演習}
+\subsection{問題を解くうえで}
+以下の事項に気を付けながら問題を解く。
+\begin{itemize}
+    \item コンパスと定規を使った正確な作図を行う。
+    \item 図を見て予想を立てる。
+    \item 基本事項が使えないか考える。
+\end{itemize}
+また、この章の最初に紹介した4つの分野を、自分はこれを使うなどと決めず、行き来しながら臨機応変に解くことが大切である。
+
+以下、初等幾何の問題を載せている。解答には図を載せているが、できるだけみないで解くのが好ましい。
+
+\begin{problem}{練習問題1}
+    相異なる3点$D,B,C$は同一直線上にあり,$DB=BC=2$である。
+    点$A$は$AB=AC$をみたし,直線$AC$と直線$DC$にそれぞれ$A,D$で接する円$\Gamma$が存在する。
+    $\Gamma$と直線$AB$の交点のうち$A$でない方をEとし,直線$CE$と$\Gamma$の交点のうち$E$でない方を$F$とするとき,
+    線分$EF$の長さを求めよ。
+
+    \includegraphics[clip,height=5cm]{figures/practice1.pdf}
+
+\end{problem}
+
+\paragraph{ポイント} 何がわかったら答えが出るのか、逆算しながら考える。
+
+\begin{answer}
+    方べきの定理より、$CE\times CF=CD^2$であるから、$CE$がわかれば$CF$が求まるので、方針として$CE$の値を考える。
+
+    $CA$と$CD$は共に$\Gamma$の接線であるから、
+
+    $CA=CD=4$
+
+\end{answer}
 \end{document}
