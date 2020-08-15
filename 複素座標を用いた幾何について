@@ -1,0 +1,160 @@
+\documentclass{jsarticle}
+\begin{document}
+
+\begin{flushleft}
+\Large{複素座標を用いた幾何について}
+\end{flushleft}
+
+\section{はじめに}
+　このテキストは、幾何の議論を、図形を複素平面上に置くことで、
+計算によって議論をするための方法や基本的な事項をまとめたものです。\par
+　基本的な複素数や複素平面の扱いが理解できていることを前提としています。
+また、細かい計算や式変形は省略していることがあるので、そこは各自補完してください。\par
+　また、今後の文章内で、\par
+実数の集合$\mathbb{R}$\par
+純虚数の集合$\mathbb{R}i$\par
+という記号を説明なしに使います。\par
+(上の書き方は一般的なものですが、下の方はわからないので、使うときには説明したほうがいいと思います。)\par
+
+\section{複素座標を使うメリット、デメリット}
+メリット\par
+\begin{itemize}
+\item{文字が少ない(直交座標だとx座標とy座標の2つ必要だが、複素座標だと1つの複素数で良い)}
+\item{交点の計算が少ない(同じく)}
+\item{対称性が見やすい(式が対称式になるので)}
+\item{幾何に特有のひらめきを使わなくて良い(ことがある)}
+\end{itemize}
+デメリット\par
+\begin{itemize}
+\item{円が2つ以上あると計算が厳しい}
+\item{円と直線の交点を求めるのが難しい(2次方程式の解になる)}
+\item{計算量が膨大になることがある}
+\end{itemize}
+
+\section{基本計算}
+基本的な計算と、それに関連する事項を紹介します。\par
+複素座標での計算は、円を$|z|=1$とすることが多いです。\par
+また、$|a|=1$のとき、$a\bar a=1$より、$\bar a=\frac{1}{a}$であるということを説明なく、頻繁に用います。\par
+ここに書くことは丸暗記しようとするのではなく、同じような議論ができることが望ましいです。
+
+\subsection{円$|z|=1$上の2点A$(a)$とB$(b)$を通る直線}
+\label{sec:弦}
+$z$が直線AB上にある\par
+\begin{math}
+\Leftrightarrow\frac{z-a}{a-b} \in \mathbb{R}\par
+\Leftrightarrow\frac{z-a}{a-b} = \overline{\left(\frac{z-a}{a-b}\right)}\par
+\Leftrightarrow\frac{z-a}{a-b} = \frac{\bar{z}-\bar{a}}{\bar{a}-\bar{b}}\par
+\Leftrightarrow(z-a)(\bar{a}-\bar{b}) = (\bar{z}-\bar{a})(a-b)\par
+\Leftrightarrow(z-a)\left(\frac{1}{a}-\frac{1}{b}\right) = \left(\bar{z}-\frac{1}{a}\right)\par
+\Leftrightarrow(z-a)+ab\left(\bar{z}-\frac{1}{a}\right) = 0\par
+\Leftrightarrow z+ab\bar{z} = a+b
+\end{math}
+
+\subsection{円$|z|=1$上の点A$(a)$とB$(b)$とC$(c)$について、Cを通る直線ABの垂線}
+\label{sec:垂線}
+$z$がCを通る直線ABの垂線上にある\par
+\begin{math}
+\Leftrightarrow \frac{z-c}{a-b} \in \mathbb{R}i\par
+\Leftrightarrow \frac{z-c}{a-b}+\overline{\left(\frac{z-c}{a-b}\right)}=0\par
+\Leftrightarrow \frac{z-c}{a-b} + \frac{\bar{z}-\bar{c}}{\bar{a}-\bar{b}}=0\par
+\Leftrightarrow (z-c)(\bar{a}-\bar{b}) + (\bar{c}-\bar{a})(a-b)=0\par
+\Leftrightarrow (z-c)\left(\frac{1}{a}-\frac{1}{b}\right) + \left(\bar{z}-\frac{1}{c}\right)=0\par
+\Leftrightarrow (z-c)-ab\left(\bar{z}-\frac{1}{c}\right) = 0\par
+\Leftrightarrow z-ab\bar{z} = c-ab\bar{c}
+\end{math}
+
+
+(注1) \ref{sec:弦} と \ref{sec:垂線} より、
+直線$z+ab\bar{z}=a+b$と直線$z-ab\bar{z} = c-ab\bar{c}$は直交する。\par
+これから、次のことが予想される。\par
+「直線$z+\alpha\bar{z}=\beta$と直線$z-\alpha\bar{z}=\gamma$は直交する」\par
+実際、これは成立する。(気になる人は確かめてください)
+
+\subsection{円$|z|=1$上の点A$(a)$とB$(b)$とC$(c)$について、Cから直線ABに引いた垂線の足}
+直線ABの式とCを通る直線ABの垂線の式を連立して解けば良い。\par
+結果は、$z=\frac{a+b+ab\bar{c}}{2}$となる。
+
+\subsection{円$|z|=1$上の点A$(a)$とB$(b)$とC$(c)$について、三角形ABCの垂心}
+Aを通る直線BCの垂線の式$z-ab\bar{z}=c-ab\bar{c}$と\par
+Bを通る直線CAの垂線の式$z-bc\bar{z}=a-bc\bar{a}$を連立して、\par
+$z=a+b+c$を得る。
+
+
+(注2)このことから、三角形についての面白い事実がわかる。\par
+三角形ABCの外心はO$(0)$,重心はG$(\frac{a+b+c}{3})$であるので、
+垂心をH$(a+b+c)$とすると、O,D,Gは同一直線状にあり、
+$OH=3OD$が成り立つ。\par
+この直線をオイラー線という。
+
+\subsection{円$|z|=1$上の点A$(a)$について、円のAにおける接線}
+(方法1)
+この直線は直線OAに垂直なので、\par\par
+$z$が円のAにおける接線上にある\par
+$\Leftrightarrow \frac{z-a}{a-0}\in\mathbb{R}i$\par
+これを、$\ref{sec:垂線}$と同様に変形して、$z+a^2\bar{z}=2a$を得る。\par\par
+
+(方法2)
+\ref{sec:弦} の式で点Bを点Aに近づけると直線ABは円のAにおける接線に近づく。
+$\Leftrightarrow z+ab\bar{z} = a+b$で、$b\to a$として、
+$z+a^2\bar{z}=2a$を得る。 \par\par
+
+(方法3)
+A’$(-a)$という点を取ると、 \ref{sec:弦} より、
+直線AA’の式は$z+a^2\bar{z}=2a$となる。\par
+Aにおける接線は、直線AA’に垂直なので、
+Aにおける接線は、$z+a^2\bar{z}=\beta$という形で表せる。(注1より)\par
+この直線はAを通るので、$z=a$を代入して、$\beta=2a$を得る。\par
+よって、$z+a^2\bar{z}=2a$である。\par\par
+
+どの方法でもいいですが、(方法3)のやり方が使えると、垂線の方程式が素早く導けて便利です。
+
+
+\subsection{円$|z|=1$上の点A$(a)$とB$(b)$について、Aにおける接線とBにおける接線の交点}
+Aにおける接線の式$z+a^2\bar{z}=2a$と\par
+Bにおける接線の式$z+b^2\bar{z}=2b$を連立して、$z=\frac{2ab}{a+b}$となる。\par\par
+(注3)このことから、ある三角形の内接円を$|z|=1$、
+接点の座標を$a,b,c$とすると、
+3つの頂点の座標は$\frac{2ab}{a+b},$\frac{2bc}{b+c},$\frac{2ca}{c+a}$である。\par
+内接円を中心にして議論を進めたい場合、このように文字を置ける。
+
+\subsection{点P$(p)$と、円$|z|=1$上の点A$(a))について、直線APと円のA以外の交点}
+求める交点をB$(b)$とすると、\ref{sec:弦}より、\par
+直線ABの式は$z+ab\bar{z}=a+b$である。\par
+この直線上にPがあるから、$p+ab\bar{p}=a+b$\par
+これを$b$について解いて、$b=\frac{a-p}{a\bar{p}-1}$となる。
+
+\subsection{円$|z|=1$上にある点A$(a)$,B$(b)$,C$(c)$,D$(d)$について、直線ABと直線CDの交点}
+直線ABの式$z+ab\bar{z}=a+b$と\par
+直線CDの式$z+cd\bar{z}=c+d$を連立して\par
+$z=\frac{acd+bcd-abc-abd}{cd-ad}=\frac{\frac{1}{a}+\frac{1}{b}-\frac{1}{c}-\frac{1}{d}}
+{\frac{1}{ab}-\frac{1}{cd}}$を得る。
+
+\section{使える諸定理(初等幾何の定理の言い換え)}
+ここでは、初等幾何での定理を複素座標で言い換えることで、それらの定理を使いやすくします。
+自力で導き出すこともできるのですが、知っているのと知らないのでは大きな差があるかと思われるので紹介します。\par
+複素座標では偏角を考えることで角度が等しい、という条件が扱えます。
+また、偏角というのは符号つきの角度なので、点の位置によって場合わけをすることなく記述できます。\par
+以下の角度は、全て向きを持つ角度(有向角と言います)を表しますが、環境の都合上、$\angle$の記号で代用します。
+
+\subsection{円周角の定理とその逆の言い換え}
+4点A,B,C,Dのうち、どの3つも同一直線状にないとして、\par\par
+4点A$(a)$,B$(b)$,C$(c)$,D$(d)$が同一円周上にある
+\begin{math}
+\Leftrightarrow \angle ACB = \angle ADB \par
+\Leftrightarrow arg(\frac{a-c}{b-c})=arg(\frac{a-d}{b-d})\par
+\Leftrightarrow \frac{a-c}{b-c} \div \frac{a-d}{b-d} = \frac{(a-c)(b-d)}{(b-c)(a-d)} \in \mathbb{R}\par
+\Leftrightarrow (a-c)(b-d)(\bar{b}+\bar{c})(\bar{a}+\bar{d}) \in \mathbb{R}\par
+\end{math}
+($(b-c)(\bar{b}+\bar{c})(a-d)(\bar{a}+\bar{d})\in\mathbb{R}より$)\par\par
+また、最後の結論の式は、ABCDの内の複数の点が同じ場合でも成立します。\par\par
+以降の言い換えは、紹介のみ行い、証明は省略します。簡単に示せるので、証明は試してみてください。
+
+\subsection{接弦定理とその逆の言い換え}
+同一直線状にない3点A,B,Cと点Dに対して、\par\par
+D$(d)$が、3点A$(a)$,B$(b)$,C$(c)$を通る円の、Cにおける接線上にある\par
+$\Leftrightarrow \frac{d-c}{a-c}\div\frac{c-b}{a-b}\in\mathbb{R}$
+
+\subsection{方べきの定理とその逆の言い換え}
+
+
+\end{document}
