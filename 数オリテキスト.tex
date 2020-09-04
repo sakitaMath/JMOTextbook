@@ -1,11 +1,11 @@
 \documentclass[uplatex,fleqn]{jsbook}
-\usepackage{amsmath,amssymb,amsthm,sakitaMath}
+\usepackage{amsmath,amssymb,amsthm,ascmac,sakitaMath}
 \usepackage[dvipdfmx,final]{graphicx}
 
 \begin{document}
 
 \title{\HUGE 「(タイトルは思いついたら差し替えてください)」}
-\author{\LARGE 佐世保北高校数学オリンピック勉強会}
+\author{\LARGE 佐世保北高校 科学オリンピック勉強会}
 \date{令和2年度}
 \maketitle
 
@@ -708,5 +708,151 @@ $O$と一致する点は反転すると無限遠点という仮想の点にな�
 
     $CA=CD=4$
 
+    仮定より、
+
+    $AB=AC=4$
+
+    方べきの定理より、
+
+    $BE\times BA=BD^2$
+
+    $BE(4-BE)=4$
+
+    $BE=4$
+
+    よって
+
+    $AB:BC=CB:BE=2:1$
+
+    $\angle ABC = \angle CBE(\because 共通)$
+
+    であるから、
+
+    $\triangle ABC ∽ \triangle CBE$
+
+    相似比は$2:1$だから、
+
+    $\displaystyle CE=\frac{1}{2}AB$
+
+    $=2$
+
+    方べきの定理より
+
+    $CE\times CF = CD^2$
+
+    $2(EF+2)=16$
+
+    $EF=6$
+\end{answer}
+
+\begin{problem}{練習問題2}
+    三角形$ABC$で、$\angle A=60^\circ,angle B=20^\circ,AB=1$のとき、
+    $\displaystyle\frac{1}{AC}-BC$の値を求めよ。
+\end{problem}
+
+\paragraph{ポイント} $20^\circ$という角は非常に扱いにくいので、うまく補助線を引く。
+
+\begin{answer}
+    $AC=x,AB=y$とおく。
+
+    $20^\circ$という角は非常に扱いにくいので、以下のように補助線を引いて正三角を作る。
+
+    \includegraphics[clip,height=5cm]{figures/practice2.pdf}
+
+    $\triangle ABC'$に着目すると、
+
+    $BC$は$\angle ABC'$の二等分線だから、
+
+    $AB:BC'=AC:CC'$
+
+    $1:y=x:(1-2x)$
+
+    $\displaystyle y = \frac{1}{x}-2$
+
+    $\frac{1}{x}-y=2$
+
+    $\therefore 2$
+\end{answer}
+
+次の問題は、作図をするところから頑張って欲しい。
+
+\begin{problem}{練習問題3}
+    $\triangle ABC$は、$AB=AC$の二等辺三角形である。
+
+    $\triangle ABC$の外接円の、$C$を含まない弧$AB$上に、点Fを取る。
+
+    $\triangle ABC$の外接円の$B$における接線$l$と、直線$AF$の交点を$K$、
+    直線$AB$と直線の$CF$の交点を$L$とするとき、
+    4点$F,L,B,K$は同一円周上にあり,$KL$と$BC$は平行であることを示せ。
+\end{problem}
+
+\begin{answer}
+    \includegraphics[clip,height=5cm]{figures/practice3.pdf}
+
+    接弦定理より、
+
+    $\angle KBL=\angle ACB$
+
+    $\triangle ABC$は、$AB=AC$の二等辺三角形だから、
+
+    $\angle ACB=\angle ABC$
+
+    円周角の定理より、
+
+    $\angle ABC=\angle AFC$
+
+    よって$\angle KBL=\angle AFC$であるから、
+
+    $F,L,B,K$は同一円周上にある。
+
+    四角形$FBCA$は円に内接するから、
+
+    $\angle ACB=\angle KFB$
+
+    $F,L,B,K$は同一円周上にあるから、円周角の定理より
+
+    $\angle KFB=\angle KLB$
+
+    よって$\angle KLB=\angle ABC$となり、
+    錯覚が等しいから$KL$と$BC$は平行。
+\end{answer}
+この解法は非常にシンプルであり、思いつかないと思うかもしれないが、
+Angle-chaseをひたすらすれば多少ごちゃごちゃしてしまっても解ける。
+記述が大変だが、一つの良い手である。
+
+\begin{problem}{練習問題4}
+    以下の図において、
+
+    $OA=5,OB=6,OC=20$
+
+    $AC\perp BD$
+
+    である。
+
+    4つの円すべてに接する円が存在するとき、$OD$の長さを求めよ。
+
+    \includegraphics[clip,height=5cm]{figures/practice4.pdf}
+\end{problem}
+
+\paragraph{ポイント}$O$を中心とする円で反転をすると、4つの円がすべて直線になる。
+
+\begin{answer}
+    $OD=x$とおく。
+
+    4つの円を中心$O$、半径$1$の円で反転すると、図のようになる。
+
+    4つの円に接する円は$O$を通らないので、同様に反転すると、円になる。
+
+    4つの円を反転した図形それぞれに接する円を書くことができれば良いので、
+
+    図の四角形が正方形になれば良い。
+
+    \includegraphics[clip,height=5cm]{figures/practice4_ans.pdf}
+
+    $\frac{1}{2x}+\frac{1}{12}=\frac{1}{10}+\frac{1}{40}$
+
+    $x=12$
+
+    $\therefore 12$
 \end{answer}
 \end{document}
