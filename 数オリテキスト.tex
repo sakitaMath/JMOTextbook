@@ -1,10 +1,10 @@
-\documentclass[uplatex,fleqn]{jsbook}
-\usepackage{amsmath,amssymb,amsthm,ascmac,wrapfig,sakitaMath}
-\usepackage[dvipdfmx,final]{graphicx}
+\documentclass[uplatex,dvipdfmx]{jsbook}
+\usepackage{amsmath,amssymb,amsthm,ascmac,tcolorbox,sakitaMath}
+\tcbuselibrary{skins}
 
 \begin{document}
 
-\title{\HUGE 「(タイトルは思いついたら差し替えてください)」}
+\title{\HUGE 「(素晴らしいタイトル)」}
 \author{\LARGE 佐世保北高校 科学オリンピック勉強会}
 \date{令和2年度}
 \maketitle
@@ -68,7 +68,7 @@ $n$種類のものから重複を許して$r$個選ぶ場合の数である。
 同じ部分を見つけたら、文字で置くなどしてまとめる。
 また、文字で置いた場合は値の範囲も確認して、ありえない値を書かないようにすること。
 
-\begin{problem}{例題}
+\begin{problem}[例題]
     $\left(x^2+2x\right)^2+3\left(x^2+2x\right)+2=0$
 
     $X=x^2+2x$とすると($X\geqq-1$ --- ①)
@@ -88,9 +88,9 @@ $n$種類のものから重複を許して$r$個選ぶ場合の数である。
     $x=-1$
 \end{problem}
 
-\begin{problem}{練習問題}
+\begin{problem}[練習問題]
     次の方程式を解け。
-    $\displaystyle \frac{1}{x^2-10x-29}+\frac{1}{x^2-10x-45}-\frac{2}{x^2-10x-69}=0$
+    $\displaystyle\frac{1}{x^2-10x-29}+\frac{1}{x^2-10x-45}-\frac{2}{x^2-10x-69}=0$
 \end{problem}
 
 \paragraph{ポイント}$x^2-10x$に着目し、まとめる。
@@ -131,14 +131,14 @@ $\left(a\neq0\right)$
     $\displaystyle \alpha\beta=\frac{c}{a}$
 \end{quote}
 因数分解をしたときに、
-\begin{quote}
-    $ax^2+bx+c=a\left(x-\alpha\right)\left(x-\beta\right)$
-\end{quote}
-となリます。右辺を展開し、係数を比較することで導くことができる。
+
+$ax^2+bx+c=a\left(x-\alpha\right)\left(x-\beta\right)$
+
+となる。右辺を展開し、係数を比較することで導くことができる。
 
 2次方程式だけでなく、3次以上の場合でも、上と同じように考えることができる。
 
-\begin{problem}{練習問題1}
+\begin{problem}[練習問題1]
     $x^{1995}-x+5=0$
 
     の全ての解の1995乗の和を求めよ。
@@ -175,13 +175,13 @@ $\left(a\neq0\right)$
 \end{answer}
 $n$次方程式の$x^{n-1}$の係数が、解の総和に$-1$をかけたものに等しいことは、覚えておいても良い。
 
-\begin{problem}{練習問題2}
+\begin{problem}[練習問題2]
     次の方程式を解け。
 
     \begin{math}
         \begin{cases}
             xy+x+y=71\\
-            x^2y+xy^2=88
+            x^2y+xy^2=880
         \end{cases}
         \left(x,y\in\mathbb{N}\right)
     \end{math}
@@ -225,7 +225,7 @@ $n$次方程式の$x^{n-1}$の係数が、解の総和に$-1$をかけたもの�
 
         $b^2-55b+16=0$
 
-        $\displaystyle b=\frac{-3 \; \sqrt{329} + 55}{2}, b=\frac{3 \; \sqrt{329} + 55}{2}$
+        $\displaystyle b=\frac{55\pm 3 \sqrt{329}}{2}$
 
         $x,y\in\mathbb{N}$より不適
     \end{quote}
@@ -244,7 +244,7 @@ $B^2\geqq 0$
 
 $A^2+B^2\geqq 0$
 
-\begin{problem}{練習問題}
+\begin{problem}[練習問題]
     $a^2+b^2+c^2\geqq ab+bc+ca$を示せ。
 \end{problem}
 
@@ -292,7 +292,7 @@ n変数の場合$\displaystyle \sum_{i=1}^n a_i\geqq n\sqrt[n]{\prod_{i=1}^n a_i
 
 等号成立は、$a=b$のときである。
 
-\begin{problem}{練習問題}
+\begin{problem}[練習問題]
     $x,y,z>0$とする
 
     $\displaystyle \frac{x^3y^2z}{x^6+y^6+z^6}$の最大値を求めよ。
@@ -372,7 +372,7 @@ $\left(a^2_1,a^2_2,a^2_3\dots,a^2_n\right)\left(b^2_1,b^2_2,b^2_3\dots,b^2_n\rig
     \end{proof}
 \end{quote}
 
-\begin{problem}{例題}
+\begin{problem}[例題]
     $4\left(w^2+x^2+y^2+z^2\right)\geqq \left(w+x+y+z\right)^2$を示す。
 
     $\left(\text{左辺}\right)=\left(1+1+1+1\right)\left(w^2+x^2+y^2+z^2\right)$
@@ -390,7 +390,7 @@ $\left(a^2_1,a^2_2,a^2_3\dots,a^2_n\right)\left(b^2_1,b^2_2,b^2_3\dots,b^2_n\rig
 
 \paragraph{注}有名不等式を使うときは、名前を書くこと。
 
-\begin{problem}{練習問題}
+\begin{problem}[練習問題]
     $x+y+z=1$、$x,y,z>0$のとき
 
     $\displaystyle \frac{1}{x}+\frac{4}{y}+\frac{9}{z}$の最小値を求めよ。
@@ -422,9 +422,9 @@ $f\left(x+1\right)=f\left(x\right)+1$的なやつ。
 
 \section{数列}
 一般項を求める問題などが出題される。
-実験$\rightarrow$予想$\rightarrow$の順で解いていく。手を動かして頑張ろう。
+実験$\rightarrow$予想$\rightarrow$証明の順で解いていく。手を動かして頑張ろう。
 
-\begin{problem}{練習問題1}
+\begin{problem}[練習問題1]
     $n\in \mathbb{N}$
 
     $a_n:\sqrt{n}$に最も近い自然数
@@ -471,7 +471,7 @@ $f\left(x+1\right)=f\left(x\right)+1$的なやつ。
 
 \end{answer}
 
-\begin{problem}{練習問題2}
+\begin{problem}[練習問題2]
     \begin{math}
         \begin{cases}
             f\left(0\right)=0\\
@@ -573,6 +573,7 @@ $\displaystyle n-\left[\frac{n}{a^k}\right]$は、$n$を$a$進数表記したと
 \subsection{チェバの定理・メネラウスの定理}
 使いどころが多いが、運用が難しい。
 \begin{itemize}
+
     \item $\displaystyle \frac{AD}{DB} \times \frac{BE}{EC} \times \frac{CF}{FA} = 1$
     \item $\displaystyle \frac{GJ}{JH} \times \frac{HK}{KI} \times \frac{IL}{LG} = 1$
 \end{itemize}
@@ -698,7 +699,7 @@ $O$と一致する点は反転すると無限遠点という仮想の点にな�
 
 以下、初等幾何の問題を載せている。解答には図を載せているが、できるだけみないで解くのが好ましい。
 
-\begin{problem}{練習問題1}
+\begin{problem}[練習問題1]
     相異なる3点$D,B,C$は同一直線上にあり,$DB=BC=2$である。
     点$A$は$AB=AC$をみたし,直線$AC$と直線$DC$にそれぞれ$A,D$で接する円$\Gamma$が存在する。
     $\Gamma$と直線$AB$の交点のうち$A$でない方をEとし,直線$CE$と$\Gamma$の交点のうち$E$でない方を$F$とするとき,
@@ -754,8 +755,8 @@ $O$と一致する点は反転すると無限遠点という仮想の点にな�
     $EF=6$
 \end{answer}
 
-\begin{problem}{練習問題2}
-    三角形$ABC$で、$\angle A=60^\circ,angle B=20^\circ,AB=1$のとき、
+\begin{problem}[練習問題2]
+    三角形$ABC$で、$\angle A=60^\circ,\angle B=20^\circ,AB=1$のとき、
     $\displaystyle\frac{1}{AC}-BC$の値を求めよ。
 \end{problem}
 
@@ -785,13 +786,13 @@ $O$と一致する点は反転すると無限遠点という仮想の点にな�
 
 次の問題は、作図をするところから頑張って欲しい。
 
-\begin{problem}{練習問題3}
+\begin{problem}[練習問題3]
     $\triangle ABC$は、$AB=AC$の二等辺三角形である。
 
     $\triangle ABC$の外接円の、$C$を含まない弧$AB$上に、点Fを取る。
 
     $\triangle ABC$の外接円の$B$における接線$l$と、直線$AF$の交点を$K$、
-    直線$AB$と直線の$CF$の交点を$L$とするとき、
+    直線$AB$と直線$CF$の交点を$L$とするとき、
     4点$F,L,B,K$は同一円周上にあり,$KL$と$BC$は平行であることを示せ。
 \end{problem}
 
@@ -823,13 +824,13 @@ $O$と一致する点は反転すると無限遠点という仮想の点にな�
     $\angle KFB=\angle KLB$
 
     よって$\angle KLB=\angle ABC$となり、
-    錯覚が等しいから$KL$と$BC$は平行。
+    錯角が等しいから$KL$と$BC$は平行。
 \end{answer}
 この解法は非常にシンプルであり、思いつかないと思うかもしれないが、
 Angle-chaseをひたすらすれば多少ごちゃごちゃしてしまっても解ける。
 記述が大変だが、一つの良い手である。
 
-\begin{problem}{練習問題4}
+\begin{problem}[練習問題4]
     下の図において、
 
     $OA=5,OB=6,OC=20$
@@ -882,7 +883,7 @@ Angle-chaseをひたすらすれば多少ごちゃごちゃしてしまっても
 
 ①の例として、以下の練習問題を解いて欲しい。
 
-\begin{problem}{練習問題}
+\begin{problem}[練習問題]
     図のようにぶら下がっている8個の的を1回ずつ撃つ。
     下にまだ撃たれていない的がある場合、その的は撃つことができない。
     8個の的の撃ち方は何通りか。ただし、狙った的は確実に撃てるものとする。
@@ -898,7 +899,7 @@ Angle-chaseをひたすらすれば多少ごちゃごちゃしてしまっても
 
     3文字のA、2文字のB、3文字のCの並べ方は、
 
-    ${}_8\mathrm{C}_3 + {}_5\mathrm{C}_2 + {}_3\mathrm{C}_3
+    ${}_8\mathrm{C}_3 \times {}_5\mathrm{C}_2 \times {}_3\mathrm{C}_3
     =560(\text{通り})$
 
     $\therefore 560$通り
@@ -906,7 +907,7 @@ Angle-chaseをひたすらすれば多少ごちゃごちゃしてしまっても
 
 \section{組み合わせ}
 ここでは学校でやるような組み合わせの問題を取り上げる。
-\begin{problem}{練習問題1}
+\begin{problem}[練習問題1]
     7つの席が横一列に並んでおり、7人が1人ずつ順番に座る。
     ただし、隣に人が座っていない席がある場合、その席に優先的に座っていく。
     このとき、座る順番は何通りあるか。
@@ -937,7 +938,7 @@ Angle-chaseをひたすらすれば多少ごちゃごちゃしてしまっても
     $7\times 4!\times 3!=1008(通り)$
 \end{answer}
 
-\begin{problem}{練習問題2}
+\begin{problem}[練習問題2]
     1から13までの数字が1つずつ書かれた13枚のカードがある。
     カードを裏返しにして横一列に並べ、左から順にめくる。
     めくったカードがそれまでめくった中で最大でなければそのカードを捨てる。
@@ -950,7 +951,7 @@ Angle-chaseをひたすらすれば多少ごちゃごちゃしてしまっても
     書かれた数字が7以上である7枚のカードのうち、最初のカードが7であれば良いので、$\displaystyle\frac{1}{7}$
 \end{answer}
 
-\begin{problem}{練習問題3}
+\begin{problem}[練習問題3]
     表にA、裏にBと書いてあるコインがある。12回投げて、連続する2回の記録を全て取ったところ、以下のようになった。
 
     \begin{tabular}{cc}
@@ -971,13 +972,13 @@ Angle-chaseをひたすらすれば多少ごちゃごちゃしてしまっても
 
     よって求める組み合わせは、
 
-    ${}_4{C}_2 \times {}_6{C}_4=90$(通り)
+    ${}_4{C}_2 \times {}_6{C}_4=30$(通り)
 \end{answer}
 
 \section{鳩の巣原理}
 $n$個の巣箱があり、そこに$n+1$羽の鳩を入れようとすると、少なくとも1つの巣箱には2羽以上の鳩が入らなければならない。これを鳩の巣原理という。これは当たり前のことであるが、とても重要である。問題を解く時には、鳩、つまりグループ分けをするものと巣箱、つまり分けるグループを何にするかを考えることが重要であり、難しい部分である。
 
-\begin{problem}{練習問題1}
+\begin{problem}[練習問題1]
     座標平面上に5個の格子点($x$座標、$y$座標が共に整数である点)があり,
     それらの中点は10個ある。中点のうち少なくとも1つは格子点であることを示せ。
 \end{problem}
@@ -988,7 +989,7 @@ $n$個の巣箱があり、そこに$n+1$羽の鳩を入れようとすると、
     よって題意を満たす。
 \end{answer}
 
-\begin{problem}{練習問題2}
+\begin{problem}[練習問題2]
     1から9の数字が20個並んでいる数列がある。
     連続する部分の積のうち、平方数になるものが必ず存在することを示せ。
 \end{problem}
@@ -1008,10 +1009,314 @@ $n$個の巣箱があり、そこに$n+1$羽の鳩を入れようとすると、
 
 パズルゲームの問題では、マス目を色分けするような問題がよく出る。
 
-\begin{problem}{例題}
+\begin{problem}[例題]
     $1\times 2$のドミノがある。
     $6\times 6$のマスにドミノを敷き詰めることはできるが、
     $5\times 5$のマスにドミノを敷き詰めることはできない。
+    $5\times 5$のマスからどのように1マス消せば、敷き詰められるか。
+
+    答えは、右の図の黒の部分を塗りつぶせば良い。
+
+    \includegraphics[clip,height=2cm]{figures/c_example.pdf}
 \end{problem}
 
+\begin{problem}[練習問題1]
+    $5 \times 5 \times 5$のキューブがある。8つの角を取り除いたとき、
+    $1 \times 1 \times 2$の直方体はいくつ敷き詰められるか。
+\end{problem}
+
+\begin{answer}
+    角があった部分が黒になるようキューブを黒と白の市松模様に塗ることを考える。
+    すると、キューブを構成する立方体のうち、55個は黒、62個は白で塗られる。
+    $1 \times 1 \times 2$の直方体のうち、半分は黒で塗られた立方体、もう半分は白で塗られた立方体と重なるよう敷き詰められるので、
+    敷き詰められる直方体の個数は55個以下。
+    実際に55個敷き詰めることができる。
+
+    $\therefore 55$
+\end{answer}
+
+\begin{problem}[練習問題2]
+    $n \times n$のマスがあり、その角にコマを置く。2人で交互にコマを上下左右1マスずつ動かす。
+    ただし、一度通ったマスを通ることはできない。動かせなくなった方が負けである。
+    2人が最善な行動をするとき、$n$が奇数なら後手が必勝であり、$n$が偶数なら先手が必勝であることを示せ。
+\end{problem}
+
+\begin{answer}
+    $n \times n$のマスを、$1\times 2$のドミノで敷き詰めることを考える。
+    $n$が奇数のとき、最初にコマが置いてあるマス以外にドミノを敷き詰める。先手がコマを動かした後、後手は今コマが乗っているドミノのもう一方の端にコマを動かせばいいので、後手必勝。
+    $n$が偶数のとき、全てのマスにドミノを敷き詰める。先手は今コマが乗っているドミノのもう一方の端にコマを動かせばいいので、先手必勝。
+\end{answer}
+
+\chapter{整数}
+整数は問題によって解き方が違う。
+\begin{problem}[例1]
+    $n^3-n$が素数になる自然数$n$を求めよ。
+
+    $n^3-n=\left(n-1\right)n\left(n+1\right)\rightarrow$存在しない。
+\end{problem}
+
+\begin{problem}[例2]
+
+    $n^3+2n$が素数になる自然数$n$を求めよ。
+
+    $n^3+2n=n\left(n^2+2\right)$
+
+    よって$n^3+2n$は$3$の倍数である。
+
+    $n=1$のとき、$n^3+2n=3$となる
+\end{problem}
+
+このこのように見た目が非常に似ている問題でも解き方が違うことがある。
+
+整数問題では以下のようなものを使う。
+
+\begin{itemize}
+    \item {余り}
+    \item {不等式}
+    \item {素因数分解}
+\end{itemize}
+
+ここでは以上のことについて順番に見ていく。
+
+\section{余り}
+\subsection{合同式}
+現時点で合同式は発展的内容として教科書に載っているが、一応解説する。
+合同式は余りに着目したものであり、非常に便利である。
+$a$と$b$をそれぞれ$n$で割った余りが等しいとき、以下のように表記する。
+
+$a \equiv b \pmod n$
+
+読み方は「$a$合同$b$モッド$n$」であり、日本語で説明するときには、
+「$a$と$b$は$n$を法として合同である」という。
+
+このとき、以下のことが成り立つ。
+
+$a \equiv a', b \equiv b' \pmod n$のとき、
+
+$a+b \equiv a'+b' \pmod n$
+
+$a-b \equiv a'-b' \pmod n$
+
+$ab \equiv a'b' \pmod n$
+
+割り算については、$ac \equiv bc \pmod n$のとき、$c$と$n$が互いに素であれば、
+
+$a \equiv b \pmod n$
+
+が成り立つ。
+
+\subsection{フェルマーの小定理}
+素数$p$と整数$a$が互いに素であるとき、$a^{p-1}\equiv 1 \pmod p$が成り立つ。
+
+\begin{problem}[例題]
+    $5^{1337}$を$7$で割った余りはいくらか。
+
+    フェルマーの小定理より、
+
+    $5^6 \equiv 1 \pmod 7$であるから、
+
+    $5^{1337}$
+
+    $\equiv 5^{6\times 222 + 5}$
+
+    $\equiv 5^5$
+
+    $\equiv 3 \pmod 7$
+
+    $\therefore 3$
+\end{problem}
+
+$5$の自然数乗を7で割った余りを順番に書き並べると、
+$5 \rightarrow 4 \rightarrow 6 \rightarrow 2 \rightarrow 3 \rightarrow 1 \rightarrow 5$
+と$7-1=6$個周期で同じ数が繰り返されていることがわかる。
+
+\subsection{オイラーの定理}
+$\varphi\left(n\right)$を$n$と互いに素である$1$以上$n$以下の数であるとすると、$n$と$a$が互いに素であるとき、
+$a^{\varphi\left(n\right)} \equiv 1 \pmod n$が成り立つ。
+特に$n$が素数のときは$\varphi\left(n\right)=n-1$となり、フェルマーの小定理と同じ形になる。
+$\varphi(n)$はオイラーの$\phi$(ファイ)関数といい、$n$の素因数を$p_1,p_2,p_3,\dots$とすると、
+$\displaystyle \varphi(n)=n\left(1-\frac{1}{p_1}\right)\left(1-\frac{1}{p_2}\right)\left(1-\frac{1}{p_3}\right)\dots$となる。
+
+\begin{problem}[練習問題]
+    $2^a-2^b$が自然数$m$の倍数になるような自然数$a,b\left(a\neq b\right)$の組が存在するとこを示せ。
+\end{problem}
+
+\begin{answer}
+    (i)$m$が奇数のとき
+
+    $2$と$m$は互いに素だから、
+
+    $2^{\varphi\left(m\right)} \equiv 1$
+
+    $2^{\varphi\left(m\right)}-1 \equiv 0$
+
+    $2^{\varphi\left(m\right)+1}-2 \equiv 0\pmod m$
+
+    よって$a=\varphi\left(m\right)+1,b=1$とすればよい。
+
+    (i\hspace{-1pt}i)$m$が偶数のとき
+
+    $m=2^c\times d$($c\geqq 1,d$は奇数)と表せる。
+
+    (i)と同様にして、$2^{\varphi\left(d\right)+1}-2$は$d$の倍数である。
+
+    $2^c\times\left(2^{\varphi\left(d\right)+1}-2\right)=2^{\varphi\left(d\right)+c+1}-2^{c+1}$は
+    $2^c$の倍数かつ$d$の倍数であり、$2^c$と$d$は互いに素だから、$m$の倍数である。
+
+    よって$a=\varphi\left(d\right)+c+1,b=c+1$とすればよい。
+\end{answer}
+
+\begin{answer}[別解]
+    $2^a\equiv 2^b \pmod m$となればよい。
+
+    $2^n\left(n\in\mathbb{N}\right)$は無限にあるが、
+    $m$で割った余りは$m$通りしかないので、鳩の巣原理より、
+    $2^a\equiv 2^b \pmod m$を満たす異なる自然数$a,b$の組み合わせが存在する。
+\end{answer}
+
+\subsection{平方剰余}
+平方剰余とは、平方数を割った余りのことである。以下の表のように、平方数の余りは決まった値しか取らない。
+
+\begin{table}[h]
+    \begin{tabular}{|c||c|c|c|c|c|c|c|c|c|c|}
+        \hline
+        $n$ & $1$ & $2$ & $3$ & $4$ & $5$ & $6$ & $7$ & $8$ & $9$ & $10$\\\hline
+        $n^2$ & $1$ & $4$ & $9$ & $16$ & $25$ & $36$ & $49$ & $64$ & $81$ & $100$\\\hline
+        $\mod 3$ & $1$ & $1$ & $0$ & $1$ & $1$ & $0$ & $1$ & $1$ & $0$ & $1$\\\hline
+        $\mod 4$ & $1$ & $0$ & $1$ & $0$ & $1$ & $0$ & $1$ & $0$ & $1$ & $0$\\\hline
+        $\mod 5$ & $1$ & $4$ & $4$ & $1$ & $0$ & $1$ & $4$ & $4$ & $1$ & $0$\\\hline
+        $\mod 6$ & $1$ & $4$ & $3$ & $4$ & $1$ & $0$ & $1$ & $4$ & $3$ & $4$\\\hline
+        $\mod 7$ & $1$ & $4$ & $2$ & $2$ & $4$ & $1$ & $0$ & $1$ & $4$ & $2$\\\hline
+        $\mod 8$ & $1$ & $4$ & $1$ & $0$ & $1$ & $4$ & $1$ & $0$ & $1$ & $4$\\\hline
+    \end{tabular}
+\end{table}
+
+\begin{problem}[練習問題]
+    $n^2=2^m-1$を満たす非負整数$m,n$の組を全て求めよ。
+\end{problem}
+
+\begin{answer}
+    $4$を法とすると、
+
+    $2^m-1\equiv
+    \begin{cases}
+        0\left(m=0\text{のとき}\right)\\
+        1\left(m=1\text{のとき}\right)\\
+        3\left(m\geqq 2\text{のとき}\right)
+    \end{cases}$
+
+    平方数を$4$で割った余りは$0$または$1$なので、$m<2$
+
+    $\therefore\left(m,n\right)=\left(0,0\right),\left(1,1\right)$
+\end{answer}
+
+\section{不等式}
+整数は無限個あるが、実数と違って飛び飛びの値であるので、不等式で評価することにより、有限個になる。
+個数が有限個になれば、全通り試すことができるようになる。
+
+\begin{problem}[例題]
+    $\displaystyle\frac{1}{x}+\frac{1}{y}+\frac{1}{z}=1\left(x\leqq y\leqq z\right)$を満たす自然数$x,y,z$の値を求める。
+
+    $x\leqq y\leqq z$より$\displaystyle\frac{1}{x}\geqq\frac{1}{y}\geqq\frac{1}{z}$であるから、
+
+    $\displaystyle\frac{1}{x}+\frac{1}{x}+\frac{1}{x}\geqq 1$
+
+    $x\leqq 3$
+\end{problem}
+
+評価の仕方によってより答えが絞れたり絞れなかったりするので、いろいろ試すことが大切である。
+
+\begin{problem}[練習問題]
+    以下の条件を満たす最大の自然数$n$を求めよ。
+    \begin{itemize}
+        \item $3$桁以上の平方数
+        \item $1$の位は$0$でない
+        \item $1$の位と$10$の位を取り去っても平方数(例えば$144\rightarrow 1$)
+    \end{itemize}
+\end{problem}
+
+\paragraph{ポイント}$n$をどのような文字式で表すかが大事である。
+
+\paragraph{ポイント}$n$をどのような文字式で表すかが大事である。
+
+\begin{answer}
+    $n=100a^2+b=m^2$とおく。$\left(1\leqq b \leqq 99\right)$
+
+    $100a^2+1 \leqq m^2$より、
+
+    $10a+1 \leqq m$
+
+    $100a^2+20a+1 \leqq m^2 \leqq 100a^2+99$
+
+    $20a \leqq 98$
+
+    よって$a\leqq 4$
+
+    $a=4$のとき、条件を満たす最大の整数$n$は
+
+    $n=41^2=1681$
+
+    この解き方では、整数であるからこそできる式変形がなされており、
+    1つ目と3つ目の不等式を比べると、左辺が大きくなっていることがわかる。
+    このようにして評価の精度を上げることができる。
+\end{answer}
+
+\begin{answer}[別解]
+    $n=100a^2+b=m^2$とおく。$\left(1\leqq b \leqq 99\right)$
+
+    $1\leqq b \leqq 99$より、
+
+    $1\leqq n-100a^2 \leqq 99$
+
+    $\left(10a\right)^2+1 \leqq n \leqq \left(10a\right)^2+99$
+
+    連続する整数の平方の間に平方数は存在しないので、
+
+    $\left(10a+1\right)^2 \leqq n \leqq \left(10a\right)^2+99$
+
+    $20a \leqq 98$
+
+    よって$a\leqq 4$
+
+    $a=4$のとき、条件を満たす最大の整数$n$は
+
+    $n=41^2=1681$
+\end{answer}
+
+\section{素因数分解}
+素因数分解をすることにより以下のようなことがわかる。
+\begin{itemize}
+    \item 約数の数
+    \item 約数の総和
+    \item 倍数・約数
+    \item 割り切れるかどうか
+    \item ある数で割れる回数(素因数分解したときの指数)
+\end{itemize}
+
+\begin{problem}
+    $\displaystyle X=\frac{2^a\times 3^b \times 5^c}{2^d\times 3^e \times 5^f}\left(0\geqq a,b,c,d,e,f\geqq 2\right)$
+
+    このとき、$X$の取り得る値の総和はいくらか。
+
+    ただし、計算はしなくとも式を示せば良い。
+\end{problem}
+
+\begin{answer}
+    $\displaystyle X=2^g\times 3^h \times 5^i\left(-2\geqq g,h,i\geqq 2\right)$
+
+    と表せるので、
+
+    $\left(2^{-2}+2^{-1}+2^{0}+2^{1}+2^{2}\right)\left(3^{-2}+3^{-1}+3^{0}+3^{1}+3^{2}\right)\left(5^{-2}+5^{-1}+5^{0}+5^{1}+5^{2}\right)$
+\end{answer}
+
+この問題ではは約数の総和を求める方法と同じことをしている。
+このように、持っている知識を生かすことが大切である。
+他にも、以下のような事実がある。
+\begin{itemize}
+    \item $xyz=$(素数)のとき、$x,y,z$のうち2つは$\pm 1$
+    \item $2$以外の素数は奇数
+    \item $p$以外の素数は$p$で割り切れない
+    \item $2,3$以外の素数は$6n\pm 1$と表せる
+\end{itemize}
+様々な考え方を知り、それを応用することが大切である。
 \end{document}
