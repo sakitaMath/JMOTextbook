@@ -154,7 +154,10 @@ $z=\frac{acd+bcd-abc-abd}{cd-ad}=\frac{\frac{1}{a}+\frac{1}{b}-\frac{1}{c}-\frac
 D$(d)$が、3点A$(a)$,B$(b)$,C$(c)$を通る円の、Cにおける接線上にある\par
 $\Leftrightarrow \frac{d-c}{a-c}\div\frac{c-b}{a-b}\in\mathbb{R}$
 
-\subsection{方べきの定理とその逆の言い換え}
-
+\section{練習問題}
+練習問題と、その解答を数問載せようと思ったのですが、その余裕がなさそうなので、参考になりそうな本やリンクを紹介します。
+\begin{itemize}
+\item{獲得金メダル！ 国際数学オリンピック メダリストが教える解き方と技}
+\item{https://nada-mathclub.jimdofree.com/%E8%B3%87%E6%96%99%E5%AE%A4/　の黒田さんのpdf}
 
 \end{document}
