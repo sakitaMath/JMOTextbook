@@ -1,3 +1,5 @@
-\newenvironment{problem}[1]{\vspace{15pt}\begin{itembox}[l]{\large \textbf{#1}}}{\end{itembox}}
-% \newenvironment{problem}[1]{\vspace{15pt}{\large \textbf{#1}}\samepage\begin{quote}}{\end{quote}}
-\newenvironment{answer}[1][解答]{\vspace{15pt}{\large \textbf{#1}}\samepage\begin{quote}}{\end{quote}}
+% \newenvironment{problem}[1][問題]{\vspace{15pt}\begin{itembox}[l]{\large \textbf{#1}}}{\end{itembox}}
+% \newenvironment{answer}[1][解答]{\vspace{15pt}{\large \textbf{#1}}\samepage\begin{quote}}{\end{quote}}
+\newtcolorbox{problem}[1][問題]{enhanced,attach boxed title to top left={xshift=3mm, yshift*=-\tcboxedtitleheight/2}, colback=white, coltitle=black, colbacktitle=white, title={\large \textbf{#1}}}
+\newtcolorbox{answer}[1][解答]{breakable,enhanced,attach boxed title to top left={xshift=3mm, yshift*=-\tcboxedtitleheight/2}, sharp corners, colback=white, title={\large \textbf{#1}}}
+
